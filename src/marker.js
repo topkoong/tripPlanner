@@ -2,10 +2,6 @@ const mapboxgl = require('mapbox-gl');
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidG9wa29vbmciLCJhIjoiY2pvZzdiNm8yMGMzcDNxcXd1MzMxNTdsbCJ9.NX2ugRQ960LN91jVC82eWg';
 
-
-
-
-
 const icons = {
   activity: 'http://i.imgur.com/WbMOfMl.png',
   hotel: 'http://i.imgur.com/D9574Cu.png',
