@@ -1,32 +1,86 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Trip Planner</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./bundle.js" defer></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet'/>
-  </head>
 
-  <body>
-  	<nav class='nav-bar'></nav>
-    <h1>This is a Heading</h1>
-    <div class='container'>
-      <div id='map'></div>
-      <div id='iconFilter'>
-      	<select>
-      	  <option value='hotels'>Hotels</option>
-      	</select>
-      	<select>
-      	  <option value='restaurants'>Restaurants</option>
-      	</select>
-      	<select>
-          <option value='thingsToDo'>Things To Do</option>
-      	</select>
-      </div>
-      <div id='itinerary'>
-      	
-      </div>
-    </div>
-  </body>
+<head>
+	<title>Trip Planner</title>
+	<link rel="stylesheet" href="./style.css" />
+	<script src="./bundle.js" defer></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+	<nav class='navbar'></nav>
+	<div class='container'>
+		<div id='map'></div>
+		<div class="wrapper">
+			<div class='iconFilter__wrapper'>
+				<ul class="iconFilter-container">
+					<li class="iconFilter-items">
+						<p>Hotels</p>
+						<div class="iconFilter-wrapper">
+							<select class="icon-filter-dropdown">
+								<option value='hotels'>Hotels</option>
+							</select>
+							<button class="btn-submit" type="submit">x</button>
+						</div>
+					</li>
+					<li class="iconFilter-items">
+						<p>Restaurants</p>
+						<div class="iconFilter-wrapper">
+							<select class="icon-filter-dropdown">
+								<option value='restaurants'>Restaurants</option>
+							</select>
+							<button class="btn-submit" type="submit">x</button>
+						</div>
+					</li>
+					<li class="iconFilter-items">
+						<p>Things To Do</p>
+						<div class="iconFilter-wrapper">
+							<select class="icon-filter-dropdown">
+								<option value='thingsToDo'>Things To Do</option>
+							</select>
+							<button class="btn-submit" type="submit">x</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class='itinerary__wrapper'>
+				<div class="itinerary-title">Itinerary:</div>
+				<div class="itinerary-content">
+					<ul class="itinerary-container">
+						<li class="itinerary-items">
+							<p>My Hotel</p>
+							<div class="itinerary-wrapper">
+									<ul>
+											<li class="itinerary-list-item">xxxxxxxxx</li>
+									</ul>
+								<button class="btn-submit" type="submit">x</button>
+							</div>
+						</li>
+						<li class="itinerary-items">
+								<p>My Restaurants</p>
+								<div class="itinerary-wrapper">
+									<ul>
+										<li class="itinerary-list-item">xxxxxxxxx</li>
+									</ul>
+									
+									<button class="btn-submit" type="submit">x</button>
+								</div>
+							</li>
+							<li class="itinerary-items">
+									<p>My Activities</p>
+									<div class="itinerary-wrapper">
+											<ul>
+												<li class="itinerary-list-item">xxxxxxxxx</li>
+											</ul>
+										<button class="btn-submit" type="submit">x</button>
+									</div>
+								</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
 
 </html>
