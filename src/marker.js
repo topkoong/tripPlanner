@@ -1,18 +1,23 @@
-const mapboxgl = require('mapbox-gl');
+const { Marker } = require("mapbox-gl");
 
 mapboxgl.accessToken = 'pk.eyJ1IjoidG9wa29vbmciLCJhIjoiY2pvZzdiNm8yMGMzcDNxcXd1MzMxNTdsbCJ9.NX2ugRQ960LN91jVC82eWg';
 
-const icons = {
-  activity: 'http://i.imgur.com/WbMOfMl.png',
-  hotel: 'http://i.imgur.com/D9574Cu.png',
-  restaurant: 'http://i.imgur.com/cqR6pUI.png'
+const iconURLs = {
+  hotels: "http://i.imgur.com/D9574Cu.png",
+  restaurants: "http://i.imgur.com/cqR6pUI.png",
+  activities: "http://i.imgur.com/WbMOfMl.png"
 };
 
 
-module.exports = (type, coordinates) => {
-  const markerDomEl = document.createElement("div");
-  markerDomEl.style.width = "32px";
-  markerDomEl.style.height = "39px";
-  markerDomEl.style.backgroundImage = `url(${icons[type]})`;
-  return new mapboxgl.Marker(markerDomEl).setLngLat(coordinates);
+const buildMarker = (type, coords) => {
+  if (!iconURLs.hasOwnProperty(type)) {
+    type = "activities";
+  }
+  const markerEl = document.createElement("div");
+  markerEl.style.backgroundSize = "contain";
+  markerEl.style.width = "32px";
+  markerEl.style.height = "37px";
+  markerEl.style.backgroundImage = `url(${iconURLs[type]})`;
+  return new Marker(markerEl).setLngLat(coords);
 };
+ module.exports = buildMarker;
